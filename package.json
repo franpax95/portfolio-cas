@@ -8,17 +8,8 @@
     "start": "next start",
     "prepare": "husky",
     "format": "prettier --write 'src/**/*.{ts,tsx,js,jsx,json,css,md}'",
-    "lint": "next lint --fix",
+    "lint": "next lint --dir src --fix",
     "lint:styles": "stylelint 'src/**/*.{css,scss}' --fix"
-  },
-  "lint-staged": {
-    "*.(ts|tsx|js|jsx|json)": [
-      "npm run lint",
-      "npm run format"
-    ],
-    "*.(css|scss)": [
-      "npm run lint:styles"
-    ]
   },
   "dependencies": {
     "next": "14.2.15",
