@@ -6,8 +6,19 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
+    "prepare": "husky",
+    "format": "prettier --write 'src/**/*.{ts,tsx,js,jsx,json,css,md}'",
     "lint": "next lint --fix",
-    "prepare": "husky"
+    "lint:styles": "stylelint 'src/**/*.{css,scss}' --fix"
+  },
+  "lint-staged": {
+    "*.(ts|tsx|js|jsx|json)": [
+      "npm run lint",
+      "npm run format"
+    ],
+    "*.(css|scss)": [
+      "npm run lint:styles"
+    ]
   },
   "dependencies": {
     "next": "14.2.15",
@@ -15,6 +26,8 @@
     "react-dom": "18"
   },
   "devDependencies": {
+    "@commitlint/cli": "19.5.0",
+    "@commitlint/config-conventional": "19.5.0",
     "@types/node": "20",
     "@types/react": "18",
     "@types/react-dom": "18",
@@ -23,7 +36,13 @@
     "eslint-config-prettier": "9.1.0",
     "eslint-plugin-prettier": "5.2.1",
     "husky": "9.1.6",
+    "lint-staged": "15.2.10",
     "sass": "1.79.5",
+    "stylelint": "16.10.0",
+    "stylelint-config-standard": "36.0.1",
+    "stylelint-config-standard-scss": "13.1.0",
+    "stylelint-order": "6.0.4",
+    "stylelint-selector-bem-pattern": "4.0.1",
     "typescript": "5"
   }
 }
