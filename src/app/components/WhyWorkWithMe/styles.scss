@@ -1,0 +1,54 @@
+.why-work-with-me {
+  background-color: var(--primary);
+
+  &__light {
+    font-weight: 100;
+  }
+
+  &__bold {
+    font-weight: 700;
+  }
+
+  &__content {
+    width: 100%;
+    max-width: 120rem;
+    padding: 7.5rem 2rem;
+    margin: 0 auto;
+  }
+
+  &__title {
+    color: var(--secondary);
+    font-size: var(--fs-xxl);
+    font-weight: 100;
+    text-transform: uppercase;
+  }
+
+  &__subtitle {
+    line-height: 0.75;
+    font-family: var(--ff-cy-grotesk);
+    font-size: var(--fs-xxxl);
+    font-weight: bold;
+  }
+
+  &__articles {
+    padding: 7.5rem 10rem;
+  }
+
+  &__article {
+    margin-bottom: 2rem;
+  }
+
+  &__article-title {
+    display: grid;
+    gap: 0.25rem;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+
+    color: var(--secondary);
+
+    font-size: var(--fs-xl);
+    font-weight: bold;
+    font-style: italic;
+    text-transform: uppercase;
+  }
+}
