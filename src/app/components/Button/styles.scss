@@ -1,0 +1,22 @@
+.button {
+  padding: 1rem;
+
+  border: solid 0.15rem var(--black);
+  background-color: var(--transparent);
+  color: var(--black);
+
+  font-size: var(--fs-md);
+  text-transform: uppercase;
+  font-weight: bold;
+
+  transition: box-shadow var(--slow), transform var(--slow);
+
+  &:hover {
+    box-shadow: 0rem 0.2rem 0.5rem 0rem rgba(0, 0, 0, 0.25);
+    transform: translateY(-0.2rem);
+  }
+
+  &:active {
+    transform: translateY(0rem);
+  }
+}
