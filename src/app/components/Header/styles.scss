@@ -3,7 +3,7 @@
   height: 100dvh;
   padding-top: 10rem;
 
-  background-color: #2b2b2b;
+  position: relative;
 
   display: flex;
   gap: 0.5rem;
@@ -11,11 +11,10 @@
   justify-content: center;
   align-items: center;
 
-  &__title,
-  &__subtitle {
-  }
+  // background-color: #2b2b2b;
 
   &__title {
+    z-index: var(--over);
     color: var(--white);
     font-family: var(--ff-cy-grotesk);
     font-weight: bold;
@@ -24,10 +23,28 @@
   }
 
   &__subtitle {
+    z-index: var(--over);
     color: var(--primary);
     font-family: var(--ff-dupincel-large-test);
 
     font-size: var(--fs-xxxl);
     font-style: italic;
+  }
+
+  &__bg {
+    width: 100%;
+    height: 100%;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    background-color: rgba(0, 0, 0, 0.5);
+
+    img {
+      z-index: -1;
+      aspect-ratio: 1366 / 768;
+      object-fit: cover;
+    }
   }
 }
