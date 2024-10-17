@@ -1,5 +1,5 @@
 .highlight-text {
-  padding: 0 1rem;
+  padding: 0 2rem;
   position: relative;
 
   font-family: var(--ff-dupincel-large-test);
@@ -19,8 +19,10 @@
     top: 0;
     left: 0;
 
-    background-color: var(--primary);
-    // clip-path: polygon(8% 98%, 5% 92%, 3% 85%, 2% 53%, 11% 51%, 5% 42%, 8% 7%, 96% 6%, 97% 10%, 93% 17%, 89% 84%, 85% 90%, 78% 96%);
-
+    // background-color: var(--primary);
+    background-image: url('/highlight-bg.svg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
   }
 }
