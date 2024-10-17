@@ -1,43 +1,64 @@
 @font-face {
   font-family: Roboto;
   font-weight: 400;
-  src: url('/src/theme/fonts/Roboto/Roboto-Regular.ttf') format('truetype');
+  src: url('./Roboto/Roboto-Regular.ttf') format('truetype');
 }
 
 @font-face {
   font-family: Roboto;
   font-style: italic;
   font-weight: 400;
-  src: url('/src/theme/fonts/Roboto/Roboto-Italic.ttf') format('truetype');
+  src: url('./Roboto/Roboto-Italic.ttf') format('truetype');
 }
 
 @font-face {
   font-family: Roboto;
   font-weight: 500;
-  src: url('/src/theme/fonts/Roboto/Roboto-Medium.ttf') format('truetype');
+  src: url('./Roboto/Roboto-Medium.ttf') format('truetype');
 }
 
 @font-face {
   font-family: Roboto;
   font-style: italic;
   font-weight: 500;
-  src: url('/src/theme/fonts/Roboto/Roboto-MediumItalic.ttf') format('truetype');
+  src: url('./Roboto/Roboto-MediumItalic.ttf') format('truetype');
 }
 
 @font-face {
   font-family: Roboto;
   font-weight: 700;
-  src: url('/src/theme/fonts/Roboto/Roboto-Bold.ttf') format('truetype');
+  src: url('./Roboto/Roboto-Bold.ttf') format('truetype');
 }
 
 @font-face {
   font-family: Roboto;
   font-style: italic;
   font-weight: 700;
-  src: url('/src/theme/fonts/Roboto/Roboto-BoldItalic.ttf') format('truetype');
+  src: url('./Roboto/Roboto-BoldItalic.ttf') format('truetype');
 }
 
 @font-face {
   font-family: Oswald;
-  src: url('/src/theme/fonts/Oswald/Oswald-VariableFont_wght.ttf') format('truetype');
+  src: url('./Oswald/Oswald-VariableFont_wght.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: Cy Grotesk;
+  src: url('./CyGrotesk/cy-grotesk-grand-regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: Cy Grotesk;
+  src: url('./CyGrotesk/cy-grotesk-grand-bold.ttf') format('truetype');
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: Dupincel Large Test;
+  src: url('./DupincelLargeTest/DupincelLargeTest-SemiBoldItalic.otf') format('opentype');
+}
+
+@font-face {
+  font-family: Aceh Light;
+  src: url('./AcehLight/Aceh-Light.ttf') format('truetype');
 }
