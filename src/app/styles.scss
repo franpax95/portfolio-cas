@@ -1,0 +1,11 @@
+.home {
+  min-height: 200dvh;
+
+  &__highlight {
+    width: 100%;
+    min-height: 15rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
