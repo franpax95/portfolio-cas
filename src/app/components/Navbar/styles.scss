@@ -1,6 +1,7 @@
 .navbar {
   --x-margin: 2rem;
 
+  z-index: var(--overtop);
   height: 10rem;
   width: 100%;
   width: calc(100% - calc(var(--x-margin) * 2));
