@@ -63,11 +63,14 @@
   &__animated-slogan {
     height: 6rem;
     width: 0;
-    width: 100%;
     margin-bottom: 1rem;
     position: relative;
     overflow: hidden;
-    transition: width var(--slow);
+    transition: width var(--very-slow);
+
+    &--animated {
+      width: 100%;
+    }
   }
 
   &__slogan {

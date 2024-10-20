@@ -1,8 +1,25 @@
+'use client';
+
+import useIntersectionObserver from '@/app/hooks/useIntersectionObserver';
 import './styles.scss';
+import { useEffect, useState } from 'react';
 
 export const About = () => {
+  const [animate, set] = useState<boolean>(false);
+  const [sectionRef, isVisible] = useIntersectionObserver<HTMLDivElement>({
+    root: null,
+    rootMargin: '0px',
+    threshold: 0.75
+  });
+
+  useEffect(() => {
+    if (isVisible) {
+      set(true);
+    }
+  }, [isVisible]);
+
   return (
-    <section className="about">
+    <section className="about" ref={sectionRef}>
       <div className="about__content">
         <div className="about__image-wrapper">{/** Imagen */}</div>
 
@@ -12,7 +29,9 @@ export const About = () => {
             <h2 className="about__subtitle">Creative Attitude Studio</h2>
           </div>
 
-          <div className="about__animated-slogan">
+          <div
+            className={`about__animated-slogan ${animate && 'about__animated-slogan--animated'}`}
+          >
             <span className="about__slogan">hey! I&apos;m Cas,</span>
           </div>
 
