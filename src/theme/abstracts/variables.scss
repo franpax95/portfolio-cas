@@ -56,8 +56,9 @@ $black: #444444;
   --danger-disabled: #{mix($danger, $white, 50%)};
 
   // Times (in ms)
-  --slow: 500ms;
-  --normal: 250ms;
+  --very-slow: 2000ms;
+  --slow: 1000ms;
+  --normal: 500ms;
   --fast: 150ms;
 
   // Layers
