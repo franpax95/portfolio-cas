@@ -1,9 +1,11 @@
+@import '../theme/abstracts/mixins.scss';
+
 .home {
   min-height: 200dvh;
 
   &__highlight {
     width: 100%;
-    min-height: 15rem;
+    min-height: 5rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -11,6 +13,14 @@
 
     &--mb {
       padding-bottom: 3rem;
+    }
+
+    @include large-mobile {
+      min-height: 10rem;
+    }
+
+    @include tablet {
+      min-height: 15rem;
     }
   }
 }
