@@ -13,23 +13,60 @@
     display: flex;
     gap: 6rem;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
-
 
     @include tablet {
       display: grid;
       grid-template-columns: 50rem 55rem;
       gap: 1rem;
+      align-items: center;
+    }
+  }
+
+  &__text-wrapper {
+    width: 0;
+    height: 12rem;
+    margin-left: 5rem;
+    margin-top: 5rem;
+
+    position: relative;
+    overflow: hidden;
+    transition: width var(--very-slow);
+    transition-delay: var(--fast);
+
+    @include tablet {
+      height: 20rem;
+      margin-top: 0rem;
+      margin-left: 0rem;
+    }
+
+    &--animated {
+      width: 30rem;
+
+      @include tablet {
+        width: 50rem;
+      }
     }
   }
 
   &__text {
+    width: 30rem;
+    height: 100%;
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
     font-family: var(--ff-cy-grotesk);
-    font-size: var(--fs-xxl);
+    font-size: var(--fs-lg);
     text-transform: uppercase;
     white-space: pre-line;
     line-height: 0.97;
+
+    @include tablet {
+      width: 50rem;
+      font-size: var(--fs-xxl);
+    }
   }
 
   &__purple {
@@ -37,45 +74,87 @@
     font-weight: bold;
   }
 
-  &__gallery {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    // background-color: yellow;
-  }
-
   &__img-wrapper {
-    width: 24rem;
-    height: 30rem;
-
+    width: 16rem;
+    height: 20rem;
     position: absolute;
+    overflow: hidden;
 
-    background-color: var(--secondary);
+    @include large-mobile {
+      width: 20rem;
+      height: 25rem;
+    }
 
-    transition: width var(--normal), height var(--normal);
+    @include tablet {
+      width: 24rem;
+      height: 30rem;
+    }
+
+    img {
+      height: 100%;
+      width: 100%;
+      transition: transform var(--normal);
+    }
 
     &--first {
       z-index: 1;
       top: 0;
       left: 0;
+
+      img {
+        transform: translateY(100%);
+      }
     }
 
     &--second {
       z-index: 2;
       top: 8rem;
       right: 5rem;
+
+      img {
+        transform: translateX(100%);
+        transition-delay: calc(var(--normal) / 2);
+      }
     }
 
     &--third {
       z-index: 3;
       bottom: 8rem;
       left: 5rem;
+
+      img {
+        transform: translateY(-100%);
+        transition-delay: var(--normal);
+      }
     }
 
     &--fourth {
       z-index: 1;
       bottom: 0;
       right: 0;
+
+      img {
+        transform: translateY(100%);
+        transition-delay: calc(var(--normal) * 1.5);
+      }
+    }
+  }
+
+  &__gallery {
+    width: 100%;
+    height: 100%;
+    min-height: 60dvh;
+
+    position: relative;
+
+    @include tablet {
+      min-height: auto;
+    }
+
+    &--animated {
+      .slogan__img-wrapper img {
+        transform: translateX(0) translateY(0);
+      }
     }
   }
 }
