@@ -5,6 +5,7 @@ import { HighlightedText } from './components/HighlightedText';
 import { Services } from './components/Services';
 import { WhyWorkWithMe } from './components/WhyWorkWithMe';
 import { Branding } from './components/Branding';
+import { Testimonials } from './components/Testimonials';
 
 export default function Home() {
   return (
@@ -24,6 +25,12 @@ export default function Home() {
       <WhyWorkWithMe />
 
       <Branding />
+
+      <Testimonials />
+
+      <div className="home__highlight">
+        <HighlightedText>crafting brilliance, one post at a time.</HighlightedText>
+      </div>
     </div>
   );
 }
