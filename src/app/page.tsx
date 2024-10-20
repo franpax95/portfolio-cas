@@ -4,6 +4,7 @@ import { About } from './components/About';
 import { HighlightedText } from './components/HighlightedText';
 import { Services } from './components/Services';
 import { WhyWorkWithMe } from './components/WhyWorkWithMe';
+import { Branding } from './components/Branding';
 
 export default function Home() {
   return (
@@ -21,6 +22,8 @@ export default function Home() {
       <Services />
 
       <WhyWorkWithMe />
+
+      <Branding />
     </div>
   );
 }
