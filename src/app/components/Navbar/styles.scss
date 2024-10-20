@@ -4,9 +4,9 @@
   z-index: var(--overtop);
   height: 10rem;
   width: 100%;
-  width: calc(100% - calc(var(--x-margin) * 2));
-  padding: 1rem 0 0.5rem;
-  margin: 0 var(--x-margin);
+  // width: calc(100% - calc(var(--x-margin) * 2));
+  padding: 1rem var(--x-margin) 0.5rem;
+  // margin: 0 var(--x-margin);
 
   position: fixed;
   top: 0;
@@ -41,6 +41,7 @@
 
   &--solid {
     background-color: var(--white);
+    background-color: lightgray;
     border-color: var(--black);
 
     .navbar__link {
