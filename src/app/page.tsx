@@ -8,6 +8,7 @@ import { Branding } from './components/Branding';
 import { Testimonials } from './components/Testimonials';
 import { Slogan } from './components/Slogan';
 import { Advantages } from './components/Advantages';
+import { Contact } from './components/Contact';
 
 export default function Home() {
   return (
@@ -37,6 +38,14 @@ export default function Home() {
       <Slogan />
 
       <Advantages />
+
+      <div className="home__highlight home__highlight--mb">
+        <HighlightedText>
+          your brand has a story that matters; let&apos;s tell it together.
+        </HighlightedText>
+      </div>
+
+      <Contact />
     </div>
   );
 }
