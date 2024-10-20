@@ -4,7 +4,15 @@ import './styles.scss';
 export const Contact = () => {
   return (
     <footer className="contact">
-      <div className="contact__bg">{/* <Image src="/contact.png" alt="Contact" fill /> */}</div>
+      <div className="contact__bg">
+        <Image
+          className="contact__bg-image"
+          src="/contact/contact_bg.png"
+          alt="Contact"
+          width={1366}
+          height={650}
+        />
+      </div>
 
       <div className="contact__content">
         <h1 className="contact__title">Get in touch now</h1>
