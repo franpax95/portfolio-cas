@@ -17,6 +17,8 @@
 
   border-bottom: solid 1px var(--white);
 
+  transition: background-color var(--fast), border-color var(--fast);
+
   &__img-wrapper {
     display: flex;
     align-items: flex-end;
@@ -34,5 +36,15 @@
     font-size: var(--fs-md);
     text-transform: uppercase;
     text-decoration: underline;
+    transition: color var(--fast);
+  }
+
+  &--solid {
+    background-color: var(--white);
+    border-color: var(--black);
+
+    .navbar__link {
+      color: var(--black);
+    }
   }
 }
