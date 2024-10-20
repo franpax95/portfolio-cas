@@ -5,12 +5,32 @@ import './styles.scss';
 import { useEffect, useState } from 'react';
 
 export const About = () => {
+  const [threshold, setThreshold] = useState<number>(0.85);
   const [animate, set] = useState<boolean>(false);
   const [sectionRef, isVisible] = useIntersectionObserver<HTMLDivElement>({
     root: null,
     rootMargin: '0px',
-    threshold: 0.75
+    threshold
   });
+
+  useEffect(() => {
+    const updateThreshold = () => {
+      const screenWidth = window.innerWidth;
+      if (screenWidth < 600) {
+        setThreshold(0.5);
+      } else {
+        setThreshold(0.85);
+      }
+    };
+
+    window.addEventListener('resize', updateThreshold);
+
+    updateThreshold();
+
+    return () => {
+      window.removeEventListener('resize', updateThreshold);
+    };
+  }, []);
 
   useEffect(() => {
     if (isVisible) {
