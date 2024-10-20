@@ -1,3 +1,5 @@
+@import '../../../theme/abstracts/mixins.scss';
+
 .why-work-with-me {
   background-color: var(--primary);
 
@@ -18,24 +20,45 @@
 
   &__title {
     color: var(--secondary);
-    font-size: var(--fs-xxl);
+    font-size: var(--fs-xl);
     font-weight: 100;
     text-transform: uppercase;
+
+    @include large-mobile {
+      font-size: var(--fs-xxl);
+    }
   }
 
   &__subtitle {
     line-height: 0.75;
     font-family: var(--ff-cy-grotesk);
-    font-size: var(--fs-xxxl);
+    font-size: var(--fs-xxl);
     font-weight: bold;
+
+    @include large-mobile {
+      font-size: var(--fs-xxxl);
+    }
   }
 
   &__articles {
-    padding: 7.5rem 10rem 2.5rem;
+    padding: 2rem 1rem 2.5rem;
+
+    @include large-mobile {
+      padding: 5rem 5rem 2.5rem;
+    }
+
+    @include tablet {
+      padding: 7.5rem 10rem 2.5rem;
+    }
   }
 
   &__article {
     margin-bottom: 2rem;
+    font-size: var(--fs-xs);
+
+    @include large-mobile {
+      font-size: var(--fs-md);
+    }
   }
 
   &__article-title {
@@ -46,9 +69,13 @@
 
     color: var(--secondary);
 
-    font-size: var(--fs-xl);
+    font-size: var(--fs-lg);
     font-weight: bold;
     font-style: italic;
     text-transform: uppercase;
+
+    @include large-mobile {
+      font-size: var(--fs-xl);
+    }
   }
 }
