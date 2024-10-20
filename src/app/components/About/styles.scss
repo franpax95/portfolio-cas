@@ -6,7 +6,7 @@
 
   &__content {
     margin: 0 auto;
-    padding: 8rem 2rem;
+    padding: 4rem 2rem 3rem;
     width: 100%;
     max-width: 100rem;
 
@@ -15,6 +15,7 @@
     flex-direction: column;
 
     @include tablet {
+      padding: 8rem 2rem;
       display: grid;
       gap: 8rem;
       grid-template-columns: 40rem 1fr;
@@ -51,6 +52,7 @@
     text-transform: uppercase;
     font-weight: 100;
     font-size: var(--fs-xxl);
+    text-align: center;
   }
 
   &__subtitle {
@@ -58,6 +60,7 @@
     font-size: var(--fs-md);
     font-family: var(--ff-secondary);
     letter-spacing: 0.34rem;
+    text-align: center;
   }
 
   &__animated-slogan {
