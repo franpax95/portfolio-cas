@@ -52,21 +52,13 @@
     }
   }
 
-  &__article {
-    margin-bottom: 2rem;
-    font-size: var(--fs-xs);
-
-    @include large-mobile {
-      font-size: var(--fs-md);
-    }
-  }
-
   &__article-title {
     display: grid;
     gap: 0.25rem;
     grid-template-columns: auto 1fr;
     align-items: center;
 
+    opacity: 0;
     color: var(--secondary);
 
     font-size: var(--fs-lg);
@@ -74,8 +66,36 @@
     font-style: italic;
     text-transform: uppercase;
 
+    transform: translateX(-5rem);
+    transition: transform var(--normal), opacity var(--normal);
+    transition-delay: var(--transition-delay);
+
     @include large-mobile {
       font-size: var(--fs-xl);
+    }
+  }
+
+  &__article-paragraph {
+    opacity: 0;
+    transform: translateX(-5rem);
+    transition: transform var(--normal), opacity var(--normal);
+    transition-delay: calc(var(--transition-delay) * 2);
+  }
+
+  &__article {
+    margin-bottom: 2rem;
+    font-size: var(--fs-xs);
+
+    @include large-mobile {
+      font-size: var(--fs-md);
+    }
+
+    &--animated {
+      .why-work-with-me__article-title,
+      .why-work-with-me__article-paragraph {
+        transform: translateX(0);
+        opacity: 1;
+      }
     }
   }
 }
