@@ -26,20 +26,30 @@
   &__quotes {
     width: 8rem;
     height: 8rem;
-    // background-color: var(--primary);
 
     display: none;
 
     position: absolute;
 
+    opacity: 0;
+
+    transition: transform var(--normal), opacity var(--normal);
+
     &--initial {
       top: 0;
       left: 0;
+      transform: translateX(-5rem);
     }
 
     &--end {
       bottom: 0;
       right: 0;
+      transform: translateX(5rem);
+    }
+
+    &--animated {
+      transform: translateX(0);
+      opacity: 1;
     }
 
     @include tablet {
