@@ -1,6 +1,6 @@
 import { wwwmArticles, WWWMArticle } from './data';
-import { CiCircleCheck } from 'react-icons/ci';
 import './styles.scss';
+import Image from 'next/image';
 
 export const WhyWorkWithMe = () => {
   return (
@@ -13,7 +13,7 @@ export const WhyWorkWithMe = () => {
           {wwwmArticles.map(({ id, title, content }: WWWMArticle) => (
             <div className="why-work-with-me__article" key={id}>
               <div className="why-work-with-me__article-title">
-                <CiCircleCheck />
+                <Image src="/icons/check.svg" alt="check" width={32} height={32} />
                 <span>{title}</span>
               </div>
 
