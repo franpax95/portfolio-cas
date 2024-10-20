@@ -1,12 +1,22 @@
+@import '../../../theme/abstracts/mixins.scss';
+
 .highlight-text {
   padding: 0 2rem;
   position: relative;
 
+  font-size: var(--fs-xs);
   font-family: var(--ff-dupincel-large-test);
-  font-size: var(--fs-xxl);
   font-weight: bold;
   font-style: italic;
   white-space: nowrap;
+
+  @include large-mobile {
+    font-size: var(--fs-lg);
+  }
+
+  @include tablet {
+    font-size: var(--fs-xxl);
+  }
 
   &::before {
     content: '';
