@@ -7,6 +7,7 @@ import { WhyWorkWithMe } from './components/WhyWorkWithMe';
 import { Branding } from './components/Branding';
 import { Testimonials } from './components/Testimonials';
 import { Slogan } from './components/Slogan';
+import { Advantages } from './components/Advantages';
 
 export default function Home() {
   return (
@@ -34,6 +35,8 @@ export default function Home() {
       </div>
 
       <Slogan />
+
+      <Advantages />
     </div>
   );
 }

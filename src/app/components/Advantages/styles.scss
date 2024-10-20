@@ -1,0 +1,80 @@
+@import '../../../theme/abstracts/mixins.scss';
+
+.advantages {
+  width: 100%;
+  box-shadow: 0rem 0.5rem 1.5rem -0.5rem rgba(0, 0, 0, 0.05);
+  min-height: 80dvh;
+  display: grid;
+  place-items: center;
+
+  &__content {
+    max-width: 120rem;
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
+    @include tablet {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      align-items: end;
+    }
+  }
+
+  &__img-wrapper {
+    max-width: 30vw;
+    max-height: 50vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img {
+      object-fit: contain;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__article {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+
+  &__title {
+    margin-bottom: 2rem;
+
+    display: flex;
+    flex-direction: column;
+
+    font-family: var(--ff-cy-grotesk);
+    font-size: var(--fs-xxl);
+    text-transform: uppercase;
+    white-space: pre-line;
+    line-height: 0.97;
+    font-weight: 100;
+  }
+
+  &__purple {
+    color: var(--secondary);
+    font-weight: bold;
+  }
+
+  &__list {
+    max-width: 47.5rem;
+    margin-left: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  &__list-el {
+    font-weight: bold;
+  }
+
+  &__uppercase {
+    text-transform: uppercase;
+  }
+}
