@@ -2,20 +2,26 @@
 
 .slogan {
   width: 100%;
-  max-width: 110rem;
-  min-height: 70rem;
-  margin: 0 auto;
+  box-shadow: 0rem 0.5rem 1.5rem -0.5rem rgba(0, 0, 0, 0.05);
 
-  display: flex;
-  gap: 6rem;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  &__content {
+    width: 100%;
+    max-width: 110rem;
+    min-height: 70rem;
+    margin: 0 auto;
 
-  @include tablet {
-    display: grid;
-    grid-template-columns: 50rem 55rem;
-    gap: 1rem;
+    display: flex;
+    gap: 6rem;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+
+    @include tablet {
+      display: grid;
+      grid-template-columns: 50rem 55rem;
+      gap: 1rem;
+    }
   }
 
   &__text {
