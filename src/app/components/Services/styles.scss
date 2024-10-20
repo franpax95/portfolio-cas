@@ -33,9 +33,21 @@
   }
 
   &__service-image-wrapper {
-    aspect-ratio: 1 / 1;
     width: 100%;
-    background-color: var(--secondary);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+    background-color: var(--black);
+  }
+
+  &__service-image {
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
   }
 
   &__service-title {

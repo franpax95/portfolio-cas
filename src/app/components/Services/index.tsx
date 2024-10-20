@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import { Button } from '../Button';
 import { Service, services } from './data';
 import './styles.scss';
@@ -16,7 +17,15 @@ export const Services = () => {
       <div className="services__content">
         {services.map(({ id, title, content, src }: Service) => (
           <div key={id} className="services__service">
-            <div className="services__service-image-wrapper">{src}</div>
+            <div className="services__service-image-wrapper">
+              <Image
+                className="services__service-image"
+                src={src}
+                alt={title}
+                width={300}
+                height={300}
+              />
+            </div>
             <h2 className="services__service-title">{title}</h2>
             <p className="services__service-paragraph">{content}</p>
           </div>
