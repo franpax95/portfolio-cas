@@ -1,12 +1,51 @@
+'use client';
+
 import Image from 'next/image';
 import './styles.scss';
 import { Button } from '../Button';
+import useIntersectionObserver from '@/app/hooks/useIntersectionObserver';
+import { useEffect, useState } from 'react';
 
 export const Advantages = () => {
+  const [threshold, setThreshold] = useState<number>(0.85);
+  const [animate, set] = useState<boolean>(false);
+  const [sectionRef, isVisible] = useIntersectionObserver<HTMLDivElement>({
+    root: null,
+    rootMargin: '0px',
+    threshold
+  });
+
+  useEffect(() => {
+    const updateThreshold = () => {
+      const screenWidth = window.innerWidth;
+      if (screenWidth < 600) {
+        setThreshold(0.5);
+      } else {
+        setThreshold(0.85);
+      }
+    };
+
+    window.addEventListener('resize', updateThreshold);
+
+    updateThreshold();
+
+    return () => {
+      window.removeEventListener('resize', updateThreshold);
+    };
+  }, []);
+
+  useEffect(() => {
+    if (isVisible) {
+      set(true);
+    }
+  }, [isVisible]);
+
   return (
-    <section className="advantages">
+    <section className="advantages" ref={sectionRef}>
       <div className="advantages__content">
-        <div className="advantages__img-wrapper">
+        <div
+          className={`advantages__img-wrapper ${animate && 'advantages__img-wrapper--animated'}`}
+        >
           <Image
             src="/advantages/mock_advantages.png"
             alt="Advantages"
@@ -16,7 +55,7 @@ export const Advantages = () => {
         </div>
 
         <div className="advantages__article">
-          <h1 className="advantages__title">
+          <h1 className={`advantages__title ${animate && 'advantages__title--animated'}`}>
             <span>I am here to</span>
             <span className="advantages__purple">support you.</span>
           </h1>
