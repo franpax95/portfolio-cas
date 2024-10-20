@@ -43,7 +43,7 @@ export const Slogan = () => {
     <section className="slogan" ref={sectionRef}>
       <div className="slogan__content">
         <div className={`slogan__text-wrapper ${animate && 'slogan__text-wrapper--animated'}`}>
-          <p className={`slogan__text ${animate && 'slogan__text--animatedfff'}`}>
+          <p className="slogan__text">
             {`Immerse\nyourself in a\nvisual journey\nwhere\n`}
             <span className="slogan__purple">{`creativity\nmeets impact.`}</span>
           </p>
