@@ -8,9 +8,9 @@ export const Navbar = () => {
       <div className="navbar__img-wrapper">
         <Image
           className="navbar__img"
-          src="/test-logo.svg"
+          src="/logo.svg"
           alt="Cassandra B Neumann Portfolio"
-          width={150}
+          width={100}
           height={60}
         />
       </div>
