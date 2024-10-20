@@ -19,4 +19,13 @@
   &:active {
     transform: translateY(0rem);
   }
+
+  &--light {
+    color: var(--white);
+    border-color: var(--white);
+
+    &:hover {
+      box-shadow: 0rem 0.2rem 0.5rem 0rem rgba(255, 255, 255, 0.3);
+    }
+  }
 }
