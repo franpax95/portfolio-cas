@@ -6,6 +6,7 @@ import { Services } from './components/Services';
 import { WhyWorkWithMe } from './components/WhyWorkWithMe';
 import { Branding } from './components/Branding';
 import { Testimonials } from './components/Testimonials';
+import { Slogan } from './components/Slogan';
 
 export default function Home() {
   return (
@@ -31,6 +32,8 @@ export default function Home() {
       <div className="home__highlight">
         <HighlightedText>crafting brilliance, one post at a time.</HighlightedText>
       </div>
+
+      <Slogan />
     </div>
   );
 }
